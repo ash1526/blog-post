@@ -1,0 +1,21 @@
+<div class="form-group mb-4 mt-4">
+    <label for="title" style="font-weight: bold;">Title</label>
+
+    <!-- required value="<%= article.title %>" when all fields(required) are not entered then we want the user to fill only required fields and the ones already filled we repopulate with the previous values -->
+    <input value="<%= article.title %>" type="text" id="label" name="title" class="form-control" style="background: rgba(255, 255, 255, .4);" required >
+</div>
+
+<div class="form-group mb-4 mt-4" >
+    <label for="description " style="font-weight: bold;" >Description</label>
+    <textarea  id="description" name="description" class="form-control" style="background: rgba(255, 255, 255, .4);"><%= article.description %></textarea>
+</div>
+
+<div class="form-group mb-4 mt-4">
+    <label for="markdown" style="font-weight: bold">Markdown</label>
+    <textarea required id="markdown" name="markdown" class="form-control" style="background: rgba(255, 255, 255, .4);"><%= article.markdown %></textarea>
+</div>
+
+<div>
+    <a href="/" class="btn btn-secondary">Cancel</a>
+    <button type="submit" class="btn btn-primary" style="text-align: right">Save</button>  
+</div>
