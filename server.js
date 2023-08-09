@@ -1,4 +1,5 @@
 const express = require('express')
+require('dotenv').config()
 const app = express()
 //importing mongoose to connect with the db
 const mongoose=require('mongoose')
@@ -13,7 +14,7 @@ const methodOverride= require('method-override')
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://0.0.0.0:27017/blog', { useUnifiedTopology: true , useNewUrlParser: true, useCreateIndex:true}).then(()=> console.log('MongoDb Connected...')).catch(err=> console.log(err))
 
 
-const PORT= process.env.PORT || 5000;
+const PORT= process.env.PORT || 5500;
 
 //setting up the view engine
 app.set('view engine', 'ejs')
