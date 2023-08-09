@@ -13,7 +13,7 @@ const methodOverride= require('method-override')
 //connecting to the database( process.env port used during deployment)
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://0.0.0.0:27017/blog', { useUnifiedTopology: true , useNewUrlParser: true, useCreateIndex:true}).then(()=> console.log('MongoDb Connected...')).catch(err=> console.log(err))
 
-
+console.log(MONGODB_URI);
 const PORT= process.env.PORT || 5500;
 
 //setting up the view engine
