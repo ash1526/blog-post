@@ -1,7 +1,7 @@
 const mongoose=require('mongoose')
 
 //npm i slugify marked,  these two are used so that the url bar doesnt look ugly by  throwing ids rather use some title or else
-const marked = require('marked')
+const {marked} = require('marked')
 const slugify= require('slugify')
 // for converting the markdown to html we use dompurify
 const createDomPurify = require('dompurify')

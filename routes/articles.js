@@ -60,7 +60,7 @@ function saveArticleAndRedirect(path){
         try{
             //saving the article (since: article.save is an async function so adding async at (req, res))
             article = await article.save()
-
+            console.log("Article saved successfully!")
             // the above stmt article on left would get saved with an id field so after saving we would redirect user to that article's id
             res.redirect(`/articles/${article.slug}`)
         } catch (e) {
